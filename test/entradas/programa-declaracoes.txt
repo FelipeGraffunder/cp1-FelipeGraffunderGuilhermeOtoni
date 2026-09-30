@@ -1,0 +1,7 @@
+int x = 10;
+double y = 3.14;
+x = x + 1; // atualiza
+
+if (x >= 10 && true) {
+    return;
+}

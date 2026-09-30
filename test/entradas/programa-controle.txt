@@ -1,0 +1,8 @@
+void f() {
+    while (false) {
+        if (true)
+            return;
+        else
+            return;
+    }
+}

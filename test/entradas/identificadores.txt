@@ -1,0 +1,1 @@
+idade x1 valor_total A nome

@@ -1,0 +1,18 @@
+Testes do scanner - Java 26.0.1
+[OK] Identificadores validos
+[OK] Lista completa de palavras reservadas
+[OK] Strings, string vazia e // dentro de string
+[OK] Literais char, inclusive espaco e aspas duplas
+[OK] Inteiros e decimais
+[OK] Todos os operadores e maximal munch
+[OK] Delimitadores
+[OK] Programa realista com declaracoes, expressao e comentario
+[OK] Funcao, parametros, chamada e retorno
+[OK] Procedimento, while e if/else
+[OK] Programa realista com tres erros e recuperacao
+[OK] Erro: string sem fechamento ate EOF
+[OK] Erro: string sem fechamento ate fim de linha e recuperacao
+[OK] Erro: simbolo em contexto invalido
+[OK] Limite de 50 caracteres e recuperacao
+
+Resultado: 15 passaram; 0 falharam.

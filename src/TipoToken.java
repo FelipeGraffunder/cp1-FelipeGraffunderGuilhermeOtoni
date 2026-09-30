@@ -1,0 +1,9 @@
+public enum TipoToken {
+    IDENTIFICADOR, 
+    PALAVRA_RESERVADA, 
+    STRING, CARACTERE,
+    NUMERO, 
+    OPERADOR, 
+    DELIMITADOR, 
+    EOF
+}

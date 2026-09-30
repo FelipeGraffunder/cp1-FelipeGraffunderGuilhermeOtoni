@@ -1,0 +1,5 @@
+int x = 10;
+double y = 10.; // erro: numero incompleto
+string mensagem = "sem fechamento
+@x = x + 1; // erro: simbolo invalido
+return x;
