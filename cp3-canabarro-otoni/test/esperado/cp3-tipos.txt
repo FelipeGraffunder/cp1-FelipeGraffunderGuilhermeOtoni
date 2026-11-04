@@ -1,0 +1,16 @@
+Programa
+  Variavel nome="a" inicial=true
+    Tipo nome="int"
+    Literal tipo="int" lexema="1"
+  Variavel nome="b" inicial=true
+    Tipo nome="double"
+    Literal tipo="double" lexema="2.5"
+  Variavel nome="c" inicial=true
+    Tipo nome="bool"
+    Literal tipo="bool" lexema="true"
+  Variavel nome="d" inicial=true
+    Tipo nome="char"
+    Literal tipo="char" lexema="'A'"
+  Variavel nome="e" inicial=true
+    Tipo nome="string"
+    Literal tipo="string" lexema="if"

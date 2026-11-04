@@ -1,0 +1,4 @@
+void p(string s, char c) { return; }
+int g() { return 1; }
+p("ok", '!');
+int x = g();

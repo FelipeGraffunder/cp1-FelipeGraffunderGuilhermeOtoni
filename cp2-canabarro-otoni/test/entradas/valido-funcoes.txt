@@ -1,0 +1,13 @@
+int soma(int a, int b) { return a + b; }
+double media(double a, double b) { return (a + b) / 2; }
+void mostrar(string texto, char fim, bool ativo) {
+    if (ativo) { escrever(texto, fim); } else { return; }
+    return;
+}
+void principal() {
+    int total = soma(1, soma(2, 3));
+    double resultado = media(7.0, 8.0);
+    mostrar("resultado", '!', true);
+    return;
+}
+principal();

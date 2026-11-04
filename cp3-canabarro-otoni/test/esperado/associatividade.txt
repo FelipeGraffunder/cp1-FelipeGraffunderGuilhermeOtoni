@@ -1,0 +1,8 @@
+Programa
+  Atribuicao
+    Id nome="x"
+    Bin operador="-"
+      Bin operador="-"
+        Id nome="a"
+        Id nome="b"
+      Id nome="c"

@@ -1,0 +1,127 @@
+import java.util.List;
+
+/** Listas FIRST/FOLLOW e listas auxiliares usadas pelo parser LL(1). */
+public final class FirstFollow {
+    static final List<String> FIRST_PROGRAMA = List.of(TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{");
+    static final List<String> FOLLOW_PROGRAMA = List.of(TipoToken.EOF.name());
+    static final List<String> FIRST_ITENS = List.of(TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{");
+    static final List<String> FOLLOW_ITENS = List.of(TipoToken.EOF.name());
+    static final List<String> FIRST_ITEM = List.of(TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{");
+    static final List<String> FOLLOW_ITEM = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{");
+    static final List<String> FIRST_TIPO = List.of("bool", "char", "double", "int", "string");
+    static final List<String> FOLLOW_TIPO = List.of(TipoToken.IDENTIFICADOR.name());
+    static final List<String> FIRST_RESTO_ITEM = List.of("(", ";", "=");
+    static final List<String> FOLLOW_RESTO_ITEM = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{");
+    static final List<String> FIRST_INICIALIZACAO = List.of("=");
+    static final List<String> FOLLOW_INICIALIZACAO = List.of(";");
+    static final List<String> FIRST_FUNCAO = List.of("(");
+    static final List<String> FOLLOW_FUNCAO = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{");
+    static final List<String> FIRST_PARAMETROS = List.of("bool", "char", "double", "int", "string");
+    static final List<String> FOLLOW_PARAMETROS = List.of(")");
+    static final List<String> FIRST_PARAMETRO = List.of("bool", "char", "double", "int", "string");
+    static final List<String> FOLLOW_PARAMETRO = List.of(")", ",");
+    static final List<String> FIRST_MAIS_PARAMETROS = List.of(",");
+    static final List<String> FOLLOW_MAIS_PARAMETROS = List.of(")");
+    static final List<String> FIRST_BLOCO = List.of("{");
+    static final List<String> FOLLOW_BLOCO = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "else", "if", "int", "return", "string", "void", "while", "{", "}");
+    static final List<String> FIRST_ELEMENTOS = List.of(TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "while", "{");
+    static final List<String> FOLLOW_ELEMENTOS = List.of("}");
+    static final List<String> FIRST_ELEMENTO = List.of(TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "while", "{");
+    static final List<String> FOLLOW_ELEMENTO = List.of(TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "while", "{", "}");
+    static final List<String> FIRST_COMANDO = List.of(TipoToken.IDENTIFICADOR.name(), "if", "return", "while", "{");
+    static final List<String> FOLLOW_COMANDO = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{", "}");
+    static final List<String> FIRST_RESTO_COMANDO = List.of("(", "=");
+    static final List<String> FOLLOW_RESTO_COMANDO = List.of(";");
+    static final List<String> FIRST_SE = List.of("if");
+    static final List<String> FOLLOW_SE = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{", "}");
+    static final List<String> FIRST_SENAO = List.of("else");
+    static final List<String> FOLLOW_SENAO = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{", "}");
+    static final List<String> FIRST_ENQUANTO = List.of("while");
+    static final List<String> FOLLOW_ENQUANTO = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{", "}");
+    static final List<String> FIRST_RETORNO = List.of("return");
+    static final List<String> FOLLOW_RETORNO = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{", "}");
+    static final List<String> FIRST_VALOR_RETORNO = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_VALOR_RETORNO = List.of(";");
+    static final List<String> FIRST_ARGUMENTOS = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_ARGUMENTOS = List.of(")");
+    static final List<String> FIRST_MAIS_ARGUMENTOS = List.of(",");
+    static final List<String> FOLLOW_MAIS_ARGUMENTOS = List.of(")");
+    static final List<String> FIRST_EXPRESSAO = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_EXPRESSAO = List.of(")", ",", ";");
+    static final List<String> FIRST_OU = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_OU = List.of(")", ",", ";");
+    static final List<String> FIRST_MAIS_OU = List.of("||");
+    static final List<String> FOLLOW_MAIS_OU = List.of(")", ",", ";");
+    static final List<String> FIRST_E = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_E = List.of(")", ",", ";", "||");
+    static final List<String> FIRST_MAIS_E = List.of("&&");
+    static final List<String> FOLLOW_MAIS_E = List.of(")", ",", ";", "||");
+    static final List<String> FIRST_IGUALDADE = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_IGUALDADE = List.of("&&", ")", ",", ";", "||");
+    static final List<String> FIRST_MAIS_IGUALDADE = List.of("!=", "==");
+    static final List<String> FOLLOW_MAIS_IGUALDADE = List.of("&&", ")", ",", ";", "||");
+    static final List<String> FIRST_RELACIONAL = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_RELACIONAL = List.of("!=", "&&", ")", ",", ";", "==", "||");
+    static final List<String> FIRST_MAIS_RELACIONAL = List.of("<", "<=", ">", ">=");
+    static final List<String> FOLLOW_MAIS_RELACIONAL = List.of("!=", "&&", ")", ",", ";", "==", "||");
+    static final List<String> FIRST_ADITIVA = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_ADITIVA = List.of("!=", "&&", ")", ",", ";", "<", "<=", "==", ">", ">=", "||");
+    static final List<String> FIRST_MAIS_ADITIVA = List.of("+", "-");
+    static final List<String> FOLLOW_MAIS_ADITIVA = List.of("!=", "&&", ")", ",", ";", "<", "<=", "==", ">", ">=", "||");
+    static final List<String> FIRST_MULTIPLICATIVA = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_MULTIPLICATIVA = List.of("!=", "&&", ")", "+", ",", "-", ";", "<", "<=", "==", ">", ">=", "||");
+    static final List<String> FIRST_MAIS_MULTIPLICATIVA = List.of("%", "*", "/");
+    static final List<String> FOLLOW_MAIS_MULTIPLICATIVA = List.of("!=", "&&", ")", "+", ",", "-", ";", "<", "<=", "==", ">", ">=", "||");
+    static final List<String> FIRST_UNARIA = List.of("!", "(", "+", "-", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_UNARIA = List.of("!=", "%", "&&", ")", "*", "+", ",", "-", "/", ";", "<", "<=", "==", ">", ">=", "||");
+    static final List<String> FIRST_PRIMARIA = List.of("(", TipoToken.CARACTERE.name(), TipoToken.IDENTIFICADOR.name(), TipoToken.NUMERO.name(), TipoToken.STRING.name(), "false", "true");
+    static final List<String> FOLLOW_PRIMARIA = List.of("!=", "%", "&&", ")", "*", "+", ",", "-", "/", ";", "<", "<=", "==", ">", ">=", "||");
+    static final List<String> FIRST_CHAMADA_OPCIONAL = List.of("(");
+    static final List<String> FOLLOW_CHAMADA_OPCIONAL = List.of("!=", "%", "&&", ")", "*", "+", ",", "-", "/", ";", "<", "<=", "==", ">", ">=", "||");
+    static final List<String> ANCORAS = List.of(";", TipoToken.EOF.name(), "}");
+    static final List<String> SYNC_ITENS = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "void", "while", "{");
+    static final List<String> PALAVRA_RESERVADA_VOID = List.of("void");
+    static final List<String> PALAVRA_RESERVADA_INT = List.of("int");
+    static final List<String> PALAVRA_RESERVADA_DOUBLE = List.of("double");
+    static final List<String> PALAVRA_RESERVADA_BOOL = List.of("bool");
+    static final List<String> PALAVRA_RESERVADA_CHAR = List.of("char");
+    static final List<String> PALAVRA_RESERVADA_STRING = List.of("string");
+    static final List<String> DELIMITADOR_ABRE_PARENTESES = List.of("(");
+    static final List<String> SELECT_RESTO_ITEM_2 = List.of(";", "=");
+    static final List<String> OPERADOR_ATRIBUICAO = List.of("=");
+    static final List<String> DELIMITADOR_VIRGULA = List.of(",");
+    static final List<String> DELIMITADOR_ABRE_BLOCO = List.of("{");
+    static final List<String> SYNC_ELEMENTOS = List.of(TipoToken.EOF.name(), TipoToken.IDENTIFICADOR.name(), "bool", "char", "double", "if", "int", "return", "string", "while", "{", "}");
+    static final List<String> IDENTIFICADOR = List.of(TipoToken.IDENTIFICADOR.name());
+    static final List<String> PALAVRA_RESERVADA_IF = List.of("if");
+    static final List<String> PALAVRA_RESERVADA_WHILE = List.of("while");
+    static final List<String> PALAVRA_RESERVADA_RETURN = List.of("return");
+    static final List<String> PALAVRA_RESERVADA_ELSE = List.of("else");
+    static final List<String> OPERADOR_OU = List.of("||");
+    static final List<String> OPERADOR_E = List.of("&&");
+    static final List<String> OPERADOR_IGUALDADE = List.of("==");
+    static final List<String> OPERADOR_DIFERENCA = List.of("!=");
+    static final List<String> OPERADOR_MENOR = List.of("<");
+    static final List<String> OPERADOR_MAIOR = List.of(">");
+    static final List<String> OPERADOR_MENOR_IGUAL = List.of("<=");
+    static final List<String> OPERADOR_MAIOR_IGUAL = List.of(">=");
+    static final List<String> OPERADOR_ADICAO = List.of("+");
+    static final List<String> OPERADOR_SUBTRACAO = List.of("-");
+    static final List<String> OPERADOR_MULTIPLICACAO = List.of("*");
+    static final List<String> OPERADOR_DIVISAO = List.of("/");
+    static final List<String> OPERADOR_RESTO = List.of("%");
+    static final List<String> OPERADOR_NEGACAO = List.of("!");
+    static final List<String> NUMERO = List.of(TipoToken.NUMERO.name());
+    static final List<String> STRING = List.of(TipoToken.STRING.name());
+    static final List<String> CARACTERE = List.of(TipoToken.CARACTERE.name());
+    static final List<String> PALAVRA_RESERVADA_TRUE = List.of("true");
+    static final List<String> PALAVRA_RESERVADA_FALSE = List.of("false");
+
+    static final List<String> RECUPERACAO_FIM_EXPRESSAO = List.of(
+        TipoToken.EOF.name(), "}", "{", "int", "double", "bool", "char", "string", "void",
+        "if", "else", "while", "return"
+    );
+
+    private FirstFollow() {
+    }
+}

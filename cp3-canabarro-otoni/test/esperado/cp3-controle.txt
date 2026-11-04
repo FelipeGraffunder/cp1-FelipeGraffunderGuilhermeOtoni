@@ -1,0 +1,26 @@
+Programa
+  Funcao nome="f" parametros=1
+    Tipo nome="int"
+    Parametro nome="x"
+      Tipo nome="int"
+    Bloco
+      Se senao=true
+        Bin operador=">"
+          Id nome="x"
+          Literal tipo="int" lexema="0"
+        Bloco
+          Enquanto
+            Bin operador=">"
+              Id nome="x"
+              Literal tipo="int" lexema="1"
+            Bloco
+              Atribuicao
+                Id nome="x"
+                Bin operador="-"
+                  Id nome="x"
+                  Literal tipo="int" lexema="1"
+        Bloco
+          Retorno valor=true
+            Literal tipo="int" lexema="0"
+      Retorno valor=true
+        Id nome="x"

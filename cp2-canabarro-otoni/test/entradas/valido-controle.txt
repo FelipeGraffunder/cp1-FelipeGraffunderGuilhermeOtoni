@@ -1,0 +1,10 @@
+int contador = 0;
+while (contador < 5) {
+    if (contador % 2 == 0) {
+        escrever(contador);
+    } else {
+        if (contador == 3) { escrever("tres"); }
+        else { escrever("impar"); }
+    }
+    contador = contador + 1;
+}

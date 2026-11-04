@@ -1,0 +1,22 @@
+Programa
+  Procedimento nome="p" parametros=2
+    Parametro nome="s"
+      Tipo nome="string"
+    Parametro nome="c"
+      Tipo nome="char"
+    Bloco
+      Retorno valor=false
+  Funcao nome="g" parametros=0
+    Tipo nome="int"
+    Bloco
+      Retorno valor=true
+        Literal tipo="int" lexema="1"
+  ChamadaCmd
+    Chamada argumentos=2
+      Id nome="p"
+      Literal tipo="string" lexema="ok"
+      Literal tipo="char" lexema="'!'"
+  Variavel nome="x" inicial=true
+    Tipo nome="int"
+    Chamada argumentos=0
+      Id nome="g"

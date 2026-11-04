@@ -1,0 +1,8 @@
+int idade = 20;
+double media = 7.5;
+bool aprovado = true;
+char turma = 'A';
+string mensagem = "if";
+idade = idade + 1;
+media = (media + 2.5) / 2;
+aprovado = media >= 6 && !(idade < 18) || false;

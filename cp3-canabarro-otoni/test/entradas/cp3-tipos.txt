@@ -1,0 +1,5 @@
+int a = 1;
+double b = 2.5;
+bool c = true;
+char d = 'A';
+string e = "if";
